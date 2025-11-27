@@ -1,0 +1,23 @@
+# ---- Core framework ----
+fastapi==0.115.5
+uvicorn[standard]==0.30.6
+python-multipart==0.0.9
+pillow==10.4.0
+
+# ---- Deep Learning stack ----
+tensorflow==2.16.1
+tensorflow-metal==1.1.0   # GPU acceleration for Apple Silicon (M1/M2/M3)
+
+# ---- Notes ----
+# Compatible with macOS (Apple Silicon, ARM64)
+# Works on Python 3.11+
+# TensorFlow 2.16.1 automatically downgrades NumPy to 1.26.x (expected)
+# Use this environment only for TensorFlow-based APIs (e.g., facial expression classification)
+
+
+# run this on new system 
+# conda create -n face311 python=3.11 -y
+# conda activate face311
+# python -m pip install -U pip setuptools wheel
+# pip install -r requirements.txt
+# uvicorn main:app --reload --host 0.0.0.0 --port 9000
